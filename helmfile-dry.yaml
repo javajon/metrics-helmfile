@@ -12,7 +12,7 @@ templates:
     chart: bitnami/{{`{{ .Release.Name }}`}}
     missingFileHandler: Warn
     values:
-    - values/{{`{{ .Release.Name }}`}}/values-{{ .Environment.Name }}.yaml
+    - values/{{`{{ .Release.Name }}`}}/values.{{ .Environment.Name }}.yaml
 
 releases:
   - name: prometheus
