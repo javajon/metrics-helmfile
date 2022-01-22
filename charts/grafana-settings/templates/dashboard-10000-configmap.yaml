@@ -4,4 +4,4 @@ metadata:
   name: dashboard-10000
 data:
   dashboard-10000.json: |-
-      {{- $.Files.Get "dashboard-10000.json" | nindent 6 -}}
+      {{- $.Files.Get "settings/dashboard-10000.json" | nindent 6 -}}
