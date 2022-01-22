@@ -9,13 +9,13 @@ releases:
     # atomic: true
     # disableValidation: true
     values: 
-    - charts/prometheus/values.development.yaml
+    - values/prometheus/values.development.yaml
 
   - name: grafana
     chart: bitnami/grafana
     version: 7.6.4
     values: 
-    - charts/grafana-values.development.yaml
+    - values/grafana/values.development.yaml
 
   - name: grafana-settings
     chart: charts/grafana-settings
