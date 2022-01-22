@@ -18,5 +18,5 @@ releases:
     - ./grafana-values.yaml
 
   - name: grafana-settings
-    chart: ./grafana-settings
+    chart: ./charts/grafana-settings
     version: 0.1.0
