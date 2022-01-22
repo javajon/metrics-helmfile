@@ -6,17 +6,17 @@ releases:
   - name: prometheus
     chart: bitnami/kube-prometheus
     version: 6.6.3
-    atomic: true
-    disableValidation: true
+    # atomic: true
+    # disableValidation: true
     values: 
-    - ./prometheus-values.yaml
+    - charts/prometheus/values.development.yaml
 
   - name: grafana
     chart: bitnami/grafana
     version: 7.6.4
     values: 
-    - ./grafana-values.yaml
+    - charts/grafana-values.development.yaml
 
   - name: grafana-settings
-    chart: ./charts/grafana-settings
+    chart: charts/grafana-settings
     version: 0.1.0

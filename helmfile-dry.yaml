@@ -1,0 +1,32 @@
+environments:
+  development:
+  staging:
+  production:
+  
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+
+templates:
+  default: &default
+    chart: bitnami/{{`{{ .Release.Name }}`}}
+    missingFileHandler: Warn
+    values:
+    - charts/{{`{{ .Release.Name }}`}}-values-{{ .Environment.Name }}.yaml
+    secrets:
+    - charts/{{`{{ .Release.Name }}`}}-secrets-{{ .Environment.Name }}.yaml
+
+releases:
+  - name: prometheus
+    bitnamiChart: kube-{{ .Release.Name }}
+    version: 6.6.3
+    <<: *default
+
+  - name: grafana
+    bitnamiChart: {{ .Release.Name }}
+    version: 7.6.4
+    <<: *default
+
+  - name: grafana-settings
+    chart: charts/{{ .Release.Name }}
+    version: 0.1.0
