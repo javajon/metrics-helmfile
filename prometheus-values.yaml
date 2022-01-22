@@ -1,0 +1,4 @@
+operator:
+  service:
+    type: NodePort
+    nodePort: 30010
