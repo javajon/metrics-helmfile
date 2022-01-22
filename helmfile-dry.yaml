@@ -12,22 +12,19 @@ templates:
     chart: bitnami/{{`{{ .Release.Name }}`}}
     missingFileHandler: Warn
     values:
-    - values/{{`{{ .Release.Name }}`}}-values-{{ .Environment.Name }}.yaml
-    secrets:
-    - secrets/{{`{{ .Release.Name }}`}}-secrets-{{ .Environment.Name }}.yaml
+    - values/{{`{{ .Release.Name }}`}}/values-{{ .Environment.Name }}.yaml
 
 releases:
   - name: prometheus
-    bitnamiChart: kube-{{ .Release.Name }}
+    <<: *default
+    chart: bitnami/kube-{{`{{ .Release.Name }}`}}
     version: 6.6.3
     disableValidation: true
-    <<: *default
 
   - name: grafana
-    bitnamiChart: {{ .Release.Name }}
-    version: 7.6.4
     <<: *default
+    version: 7.6.4
 
   - name: grafana-settings
-    chart: charts/{{ .Release.Name }}
+    chart: charts/{{`{{ .Release.Name }}`}}
     version: 0.1.0

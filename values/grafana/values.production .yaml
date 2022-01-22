@@ -1,0 +1,16 @@
+operator:
+  service:
+    type: Loadbalancer
+
+persistence:
+  enabled: true
+
+dashboardsProvider:
+  enabled: true
+
+datasources:
+  secretName: datasource-secret
+
+dashboardsConfigMaps:
+  - configMapName: dashboard-10000
+    filename: dashboard-10000.json
