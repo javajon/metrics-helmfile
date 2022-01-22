@@ -6,6 +6,6 @@ An example helmfile for setting up Bitnami Prometheus and Grafana charts for bas
 
 - [Gathering Metrics from Kubernetes with Prometheus and Grafana](https://tanzu.vmware.com/developer/guides/observability-prometheus-grafana-p1/)
 - [Managing Helm Charts with Helmfile](https://www.arthurkoziel.com/managing-helm-charts-with-helmfile/)
-- [Scenario: Helm](TODO)
-- [Scenario: Helmfile](TODO)
-- [Scenario: Prometheus and Grafana](TODO)
+- [Kubernetes Pipelines: Helm](https://learning.oreilly.com/scenarios/kubernetes-pipelines-helm/9781492078968/)
+- [Kubernetes Pipelines: Helmfile](https://learning.oreilly.com/scenarios/kubernetes-pipelines-helmfile/TODO-ONCE-PUBLISHED/)
+- [Scenario: Kubernetes Observability: Prometheus and Grafana](https://learning.oreilly.com/scenarios/prometheus-grafana/TODO-ONCE-PUBLISHED/)
