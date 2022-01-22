@@ -6,8 +6,7 @@ releases:
   - name: prometheus
     chart: bitnami/kube-prometheus
     version: 6.6.3
-    # atomic: true
-    # disableValidation: true
+    disableValidation: true
     values: 
     - values/prometheus/values.development.yaml
 

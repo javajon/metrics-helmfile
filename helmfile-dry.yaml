@@ -20,6 +20,7 @@ releases:
   - name: prometheus
     bitnamiChart: kube-{{ .Release.Name }}
     version: 6.6.3
+    disableValidation: true
     <<: *default
 
   - name: grafana
