@@ -5,14 +5,14 @@ repositories:
 releases:
   - name: prometheus
     chart: bitnami/kube-prometheus
-    version: 6.6.3
+    version: 8.14.1
     disableValidation: true
     values: 
     - values/prometheus/values.development.yaml
 
   - name: grafana
     chart: bitnami/grafana
-    version: 7.6.4
+    version: 8.4.6
     values: 
     - values/grafana/values.development.yaml
 

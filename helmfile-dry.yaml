@@ -18,12 +18,12 @@ releases:
   - name: prometheus
     <<: *default
     chart: bitnami/kube-{{`{{ .Release.Name }}`}}
-    version: 6.6.3
+    version: 8.14.1
     disableValidation: true
 
   - name: grafana
     <<: *default
-    version: 7.6.4
+    version: 8.4.6
 
   - name: grafana-settings
     chart: charts/{{`{{ .Release.Name }}`}}
